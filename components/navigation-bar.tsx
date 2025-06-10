@@ -17,12 +17,12 @@ const navLinks = [
 ]
 
 export default function NavigationBar() {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      setIsScrolled(window.scrollY > 50)
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -33,24 +33,28 @@ export default function NavigationBar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-2" : "bg-transparent py-4",
+        isScrolled ? "bg-white/70 backdrop-blur-xl shadow-sm" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <Logo />
+      <div className="container mx-auto px-8 py-4 flex items-center justify-between">
+        <Logo variant={isScrolled ? "dark" : "light"} />
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-12">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-emerald-600",
-                isScrolled ? "text-gray-800" : "text-white",
+                "text-base font-medium transition-colors relative group",
+                isScrolled ? "text-gray-600 hover:text-[rgb(46,118,94)]" : "text-white hover:text-white/80"
               )}
             >
               {link.name}
+              <span className={cn(
+                "absolute inset-x-0 bottom-0 h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-out",
+                isScrolled ? "bg-[rgb(46,118,94)]" : "bg-white"
+              )} />
             </a>
           ))}
         </nav>
@@ -59,34 +63,42 @@ export default function NavigationBar() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className={cn(
+            "md:hidden",
+            isScrolled ? "text-gray-600 hover:text-[rgb(46,118,94)]" : "text-white hover:text-white/80"
+          )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {mobileMenuOpen ? (
-            <X className={isScrolled ? "text-gray-800" : "text-white"} />
+            <X className="h-6 w-6" />
           ) : (
-            <Menu className={isScrolled ? "text-gray-800" : "text-white"} />
+            <Menu className="h-6 w-6" />
           )}
         </Button>
       </div>
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-white p-4 shadow-md">
-          <div className="flex flex-col space-y-4">
+        <div className={cn(
+          "md:hidden",
+          isScrolled ? "bg-white/70 backdrop-blur-xl" : "bg-black/80 backdrop-blur-sm"
+        )}>
+          <nav className="container mx-auto px-8 py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-800 font-medium hover:text-emerald-600"
+                className={cn(
+                  "text-base font-medium transition-colors",
+                  isScrolled ? "text-gray-600 hover:text-[rgb(46,118,94)]" : "text-white hover:text-white/80"
+                )}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
-          </div>
-        </nav>
+          </nav>
+        </div>
       )}
     </header>
   )
