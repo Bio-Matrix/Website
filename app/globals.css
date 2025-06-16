@@ -89,3 +89,12 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+/* Logo color variants */
+.logo-light {
+  --logo-color: #ffffff;
+}
+
+.logo-dark {
+  --logo-color: #28593A;
+}

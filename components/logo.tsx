@@ -13,11 +13,11 @@ export default function Logo({ className, variant = "dark" }: LogoProps) {
   return (
     <Link href="#home" className={cn("flex items-center", className)}>
       <Image
-        src="/images/Logo copy.png"
+        src= {variant === "light" ? "/images/logow.svg" : "/images/logo.svg"}
         alt="BioMetrics Logo"
-        width={240}
+        width={160}
         height={72}
-        className="h-16 w-auto"
+        className="h-14 w-auto"
       />
     </Link>
   )

@@ -47,7 +47,7 @@ export default function NavigationBar() {
               href={link.href}
               className={cn(
                 "text-base font-medium transition-colors relative group",
-                isScrolled ? "text-gray-600 hover:text-[rgb(46,118,94)]" : "text-white hover:text-white/80"
+                isScrolled ? "text-gray-700 hover:text-[rgb(46,118,94)]" : "text-white hover:text-white/80"
               )}
             >
               {link.name}

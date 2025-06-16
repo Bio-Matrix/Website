@@ -8,7 +8,7 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-800 to-teal-900 text-white overflow-hidden"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      {/* <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full">
           {[...Array(20)].map((_, i) => (
             <div
@@ -24,7 +24,7 @@ export default function HeroSection() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
       <div className="container mx-auto px-4 z-10 pt-20">
         <div className="max-w-4xl mx-auto text-center">
