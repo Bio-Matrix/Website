@@ -5,7 +5,7 @@ import Logo from "@/components/logo"
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <footer id="contact" className="bg-gray-900 text-gray-300 pt-16 pb-8 px-4">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* About */}
@@ -29,6 +29,9 @@ export default function Footer() {
               </a>
             </div>
           </div>
+          <div>
+            
+          </div>
 
           {/* Contact */}
           <div>
@@ -47,7 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-semibold text-lg mb-4">Newsletter</h3>
             <p className="text-gray-400 mb-4">
               Subscribe to our newsletter for updates on events, projects, and opportunities.
@@ -61,7 +64,7 @@ export default function Footer() {
               />
               <Button className="w-full bg-emerald-600 hover:bg-emerald-700">Subscribe</Button>
             </form>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom */}

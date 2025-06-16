@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react"
+import CorePillars from "@/components/sections/core-pillars"
 
 export default function AboutSection() {
   const objectives = [
@@ -29,8 +30,9 @@ export default function AboutSection() {
               projects and industry partnerships.
             </p>
           </div>
+          
 
-          <div>
+          {/* <div>
             <h3 className="text-2xl font-semibold mb-4">Mission & Objectives</h3>
             <ul className="space-y-3">
               {objectives.map((objective, index) => (
@@ -40,8 +42,9 @@ export default function AboutSection() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
+        <CorePillars />
       </div>
     </section>
   )

@@ -21,9 +21,9 @@ export default function Home() {
         <HeroSection />
       </AnimatedSection>
 
-      <AnimatedSection animation="fade-in" duration={800}>
+      {/* <AnimatedSection animation="fade-in" duration={800}>
         <CorePillars />
-      </AnimatedSection>
+      </AnimatedSection> */}
       
       {/* About section slides up */}
       <AnimatedSection animation="fade-up" delay={100}>
