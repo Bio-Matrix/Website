@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react"
 import CorePillars from "@/components/sections/core-pillars"
+import Image from "next/image"
 
 export default function AboutSection() {
   const objectives = [
@@ -21,14 +22,35 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="mb-12">
-            <h3 className="text-2xl font-semibold mb-4">Our Story</h3>
-            <p className="text-gray-700 mb-4">
-              Founded in 2023 by a group of passionate biology and computer science students, BioMetrics emerged from a
-              shared vision to bridge the gap between biological research and quantitative analysis. What began as
-              informal study sessions has evolved into a recognized campus organization with multiple ongoing research
-              projects and industry partnerships.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6">Our Story</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">
+                Founded in 2023 by a group of passionate biology and computer science students, BioMetrics emerged from a
+                shared vision to bridge the gap between biological research and quantitative analysis. What began as
+                informal study sessions has evolved into a recognized campus organization with multiple ongoing research
+                projects and industry partnerships.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Today, our diverse team of researchers, developers, and innovators continues to push the boundaries
+                of what's possible when biological sciences meet cutting-edge technology.
+              </p>
+            </div>
+            
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <Image
+                  src="/images/croppedteam.jpg"
+                  alt="BioMetrics team members collaborating on research"
+                  width={600}
+                  height={400}
+                  className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl"></div>
+              <div className="absolute -top-4 -left-4 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
+            </div>
           </div>
           
 
