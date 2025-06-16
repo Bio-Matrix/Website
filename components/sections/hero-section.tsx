@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Microscope } from "lucide-react"
 
@@ -43,7 +44,7 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-white text-emerald-800 hover:bg-emerald-100">
+            <Button  size="lg" className="bg-white text-emerald-800 hover:bg-emerald-100" onClick={() => window.location.href = '#projects'}>
               Explore Projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
