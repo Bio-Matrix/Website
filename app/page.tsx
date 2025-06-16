@@ -31,7 +31,7 @@ export default function Home() {
       </AnimatedSection>
       
       {/* Projects section slides from left */}
-      <AnimatedSection animation="slide-left" delay={150}>
+      <AnimatedSection animation="fade-up" delay={150}>
         <ProjectsSection />
       </AnimatedSection>
       
@@ -41,7 +41,7 @@ export default function Home() {
       </AnimatedSection>
       
       {/* News section slides from right */}
-      <AnimatedSection animation="slide-right" delay={100}>
+      <AnimatedSection animation="fade-up" delay={100}>
         <NewsSection />
       </AnimatedSection>
       

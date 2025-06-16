@@ -33,7 +33,7 @@ export default function Component() {
   ]
 
   return (
-    <section className="py-16 px-4 from-slate-50 to-gray-100">
+    <section className="py-16 from-slate-50 to-gray-100">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
