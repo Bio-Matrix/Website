@@ -17,7 +17,7 @@ export default function Logo({ className, variant = "dark" }: LogoProps) {
         alt="BioMetrics Logo"
         width={160}
         height={72}
-        className="h-14 w-auto"
+        className="h-12 md:h-14 w-auto"
       />
     </Link>
   )
