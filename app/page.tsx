@@ -8,6 +8,7 @@ import SponsorsSection from "@/components/sections/sponsors-section"
 import JoinSection from "@/components/sections/join-section"
 import Footer from "@/components/footer"
 import AnimatedSection from "@/components/animated-section"
+import CorePillars from "@/components/sections/core-pillars"
 
 export default function Home() {
   return (
@@ -18,6 +19,10 @@ export default function Home() {
       {/* Hero section with immediate fade-in */}
       <AnimatedSection animation="fade-in" duration={800}>
         <HeroSection />
+      </AnimatedSection>
+
+      <AnimatedSection animation="fade-in" duration={800}>
+        <CorePillars />
       </AnimatedSection>
       
       {/* About section slides up */}

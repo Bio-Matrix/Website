@@ -35,7 +35,14 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-normal bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]
+from-emerald-50
+via-emerald-100
+to-emerald-200  
+bg-clip-text
+text-transparent
+pb-2
+">
             Advancing Biometric Research Through Student Innovation
           </h1>
 
@@ -48,16 +55,14 @@ export default function HeroSection() {
               Explore Projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Apply Now
-            </Button>
+            
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <span className="text-sm text-emerald-100 mb-2">Scroll to explore</span>
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex-col items-center hidden md:flex">
+        <span className="text-sm text-emerald-100 mb-2 ">Scroll to explore</span>
         <div className="w-6 h-10 border-2 border-emerald-100 rounded-full flex justify-center">
           <div className="w-1.5 h-1.5 bg-white rounded-full animate-bounce mt-2"></div>
         </div>
