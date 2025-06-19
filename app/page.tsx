@@ -40,11 +40,6 @@ export default function Home() {
         <TeamSection />
       </AnimatedSection>
       
-      {/* News section slides from right */}
-      <AnimatedSection animation="fade-up" delay={100}>
-        <NewsSection />
-      </AnimatedSection>
-      
       {/* Sponsors section fades up */}
       <AnimatedSection animation="fade-up" delay={150}>
         <SponsorsSection />
