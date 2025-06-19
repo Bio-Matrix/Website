@@ -26,6 +26,10 @@ export default function Home() {
         <ProjectsSection />
       </AnimatedSection>
 
+      <AnimatedSection animation="fade-up" delay={150}>
+        <CorePillars />
+      </AnimatedSection>
+
       {/* About section slides up */}
       <AnimatedSection animation="fade-up" delay={100}>
         <AboutSection />

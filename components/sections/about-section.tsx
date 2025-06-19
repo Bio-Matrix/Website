@@ -3,14 +3,6 @@ import CorePillars from "@/components/sections/core-pillars"
 import Image from "next/image"
 
 export default function AboutSection() {
-  const objectives = [
-    "Foster interdisciplinary collaboration between biology and technology",
-    "Provide hands-on research experience for undergraduate students",
-    "Develop innovative solutions to real-world healthcare challenges",
-    "Promote ethical considerations in biometric research",
-    "Build partnerships with industry and academic institutions",
-  ]
-
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -52,21 +44,7 @@ export default function AboutSection() {
               <div className="absolute -top-4 -left-4 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
             </div>
           </div>
-          
-
-          {/* <div>
-            <h3 className="text-2xl font-semibold mb-4">Mission & Objectives</h3>
-            <ul className="space-y-3">
-              {objectives.map((objective, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-emerald-500 mr-2 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">{objective}</span>
-                </li>
-              ))}
-            </ul>
-          </div> */}
         </div>
-        <CorePillars />
       </div>
     </section>
   )
