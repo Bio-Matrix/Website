@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+const { fontFamily } = require("tailwindcss/defaultTheme")
 
 const config = {
   darkMode: ["class"],
@@ -100,7 +101,8 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        gotham: ['Gotham Bold', 'sans-serif'],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        "plus-jakarta": ['"Plus Jakarta Sans"', ...fontFamily.sans],
       },
     },
   },
