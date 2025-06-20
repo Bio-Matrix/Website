@@ -7,131 +7,46 @@ import { Button } from "@/components/ui/button"
 const sponsors = [
   {
     name: "BioTech Industries",
-    logo: "/placeholder.svg?height=80&width=200",
+    logo: "/images/logo-tum.png",
   },
   {
     name: "GenomicsFuture",
-    logo: "/placeholder.svg?height=80&width=200",
+    logo: "/images/LMU_Muenchen_Logo.png",
   },
   {
     name: "MedTech Labs",
-    logo: "/placeholder.svg?height=80&width=200",
-  },
-  {
-    name: "Neural Systems Inc",
-    logo: "/placeholder.svg?height=80&width=200",
-  },
-  {
-    name: "HealthMetrics",
-    logo: "/placeholder.svg?height=80&width=200",
-  },
-  {
-    name: "University Research Foundation",
-    logo: "/placeholder.svg?height=80&width=200",
-  },
-  {
-    name: "BioInnovate",
-    logo: "/placeholder.svg?height=80&width=200",
-  },
+    logo: "/images/tumventure.png",
+  }
 ]
 
 export default function SponsorsSection() {
-  const scrollRef = useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
-
-  const checkScrollButtons = () => {
-    if (scrollRef.current) {
-      setCanScrollLeft(scrollRef.current.scrollLeft > 0)
-      setCanScrollRight(
-        scrollRef.current.scrollLeft < scrollRef.current.scrollWidth - scrollRef.current.clientWidth - 10,
-      )
-    }
-  }
-
-  useEffect(() => {
-    const scrollElement = scrollRef.current
-    if (scrollElement) {
-      scrollElement.addEventListener("scroll", checkScrollButtons)
-      // Initial check
-      checkScrollButtons()
-
-      // Check on window resize
-      window.addEventListener("resize", checkScrollButtons)
-
-      return () => {
-        scrollElement.removeEventListener("scroll", checkScrollButtons)
-        window.removeEventListener("resize", checkScrollButtons)
-      }
-    }
-  }, [])
-
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const scrollAmount = 300
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      })
-    }
-  }
-
   return (
-    <section id="sponsors" className="py-20 bg-white">
+    <section id="sponsors" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Partners & Sponsors</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Organizations that support our mission and research</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 font-plus-jakarta tracking-wide text-emerald-900">
+            Partners
+          </h2>
+          <p className="text-base md:text-lg text-emerald-800/80 max-w-2xl mx-auto font-plus-jakarta tracking-wide">
+            Organizations supporting our research and innovation
+          </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
-          {/* Scroll buttons */}
-          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -ml-4 z-10">
-            <Button
-              variant="outline"
-              size="icon"
-              className={`rounded-full bg-white shadow-md ${!canScrollLeft ? "opacity-50 cursor-not-allowed" : ""}`}
-              onClick={() => scroll("left")}
-              disabled={!canScrollLeft}
-              aria-label="Scroll left"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </Button>
-          </div>
-
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 -mr-4 z-10">
-            <Button
-              variant="outline"
-              size="icon"
-              className={`rounded-full bg-white shadow-md ${!canScrollRight ? "opacity-50 cursor-not-allowed" : ""}`}
-              onClick={() => scroll("right")}
-              disabled={!canScrollRight}
-              aria-label="Scroll right"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </Button>
-          </div>
-
-          {/* Carousel */}
-          <div
-            ref={scrollRef}
-            className="overflow-x-auto scrollbar-hide pb-4"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            <div className="flex space-x-8 min-w-max">
-              {sponsors.map((sponsor, index) => (
-                <div key={index} className="flex flex-col items-center">
-                  <div className="w-[180px] h-[80px] bg-gray-50 rounded-lg flex items-center justify-center p-4">
+        <div className="max-w-[800px] mx-auto">
+          <div className="flex justify-center items-center gap-24">
+            {sponsors.map((sponsor, index) => (
+              <div key={index} className="flex items-center group">
+                <div className="relative">
+                  <div className="w-[240px] h-[120px] flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
                     <img
                       src={sponsor.logo || "/placeholder.svg"}
                       alt={`${sponsor.name} logo`}
-                      className="max-w-full max-h-full"
+                      className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
-                  <span className="mt-2 text-sm text-gray-600">{sponsor.name}</span>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

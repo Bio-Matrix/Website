@@ -5,26 +5,26 @@ import Logo from "@/components/logo"
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-gray-900 text-gray-300 pt-16 pb-8 px-4">
+    <footer id="contact" className="bg-emerald-900 text-emerald-100 pt-16 pb-8 px-4">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* About */}
           <div>
             <Logo variant="light" className="mb-4" />
-            <p className="text-gray-400 mb-6">
+            <p className="text-emerald-100/80 mb-6 font-plus-jakarta">
               Advancing biometric research through student innovation and interdisciplinary collaboration.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+              <a href="#" className="text-emerald-100/70 hover:text-white transition-colors" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="#" className="text-emerald-100/70 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+              <a href="#" className="text-emerald-100/70 hover:text-white transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+              <a href="#" className="text-emerald-100/70 hover:text-white transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -35,46 +35,28 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Contact Us</h3>
-            <ul className="space-y-3">
+            <h3 className="text-white font-semibold text-lg mb-4 font-plus-jakarta">Contact Us</h3>
+            <ul className="space-y-3 font-plus-jakarta">
               <li className="flex items-start">
-                <Mail className="h-5 w-5 mr-2 mt-0.5 text-emerald-500" />
-                <span>contact@biometrics-club.edu</span>
+                <span className="text-emerald-100/90">biomatrixclub@gmail.com</span>
               </li>
-              <li>
-                <p>Science Building, Room 301</p>
-                <p>University Campus</p>
-                <p>City, State 12345</p>
+              <li className="text-emerald-100/80">
+                <p>Technische Universität München</p>
+                <p>Boltzmannstraße 11</p>
+                <p>85748 Garching bei München</p>
               </li>
             </ul>
           </div>
-
-          {/* Newsletter */}
-          {/* <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Newsletter</h3>
-            <p className="text-gray-400 mb-4">
-              Subscribe to our newsletter for updates on events, projects, and opportunities.
-            </p>
-            <form className="space-y-2">
-              <Input
-                type="email"
-                placeholder="Your email address"
-                className="bg-gray-800 border-gray-700 text-white"
-                required
-              />
-              <Button className="w-full bg-emerald-600 hover:bg-emerald-700">Subscribe</Button>
-            </form>
-          </div> */}
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-gray-800 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
+        <div className="pt-8 border-t border-emerald-800 text-sm text-emerald-100/70 flex flex-col md:flex-row justify-between items-center font-plus-jakarta">
           <p>© 2025 BioMetrics. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-gray-300 transition-colors">
+            <a href="#" className="hover:text-white transition-colors">
               Terms of Use
             </a>
           </div>
