@@ -35,19 +35,9 @@ export default function Home() {
         <AboutSection />
       </AnimatedSection>
       
-      {/* Team section scales up */}
-      <AnimatedSection animation="scale-up" delay={200}>
-        <TeamSection />
-      </AnimatedSection>
-      
       {/* Sponsors section fades up */}
       <AnimatedSection animation="fade-up" delay={150}>
         <SponsorsSection />
-      </AnimatedSection>
-      
-      {/* Join section scales up */}
-      <AnimatedSection animation="scale-up" delay={200}>
-        <JoinSection />
       </AnimatedSection>
       
       {/* Footer fades in */}
