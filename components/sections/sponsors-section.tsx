@@ -28,12 +28,12 @@ export default function SponsorsSection() {
             Partners
           </h2>
           <p className="text-base md:text-lg text-emerald-800/80 max-w-2xl mx-auto font-plus-jakarta tracking-wide">
-            Organizations supporting our research and innovation
+            Organizations supporting our research
           </p>
         </div>
 
-        <div className="max-w-[800px] mx-auto">
-          <div className="flex justify-center items-center gap-24">
+        <div className="max-w-[800px] mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-24">
             {sponsors.map((sponsor, index) => (
               <div key={index} className="flex items-center group">
                 <div className="relative">

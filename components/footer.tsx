@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <Logo variant="light" className="mb-4" />
             <p className="text-emerald-100/80 mb-6 font-plus-jakarta">
-              Advancing biometric research through student innovation and interdisciplinary collaboration.
+              Bridging the gap between biological problems<br></br>and technological solutions
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-emerald-100/70 hover:text-white transition-colors" aria-label="Twitter">
