@@ -10,9 +10,14 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Biomatrix Club',
+  description: 'Biomatrix Club - Advancing Computational Biology',
   generator: 'v0.dev',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({

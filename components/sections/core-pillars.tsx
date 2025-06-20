@@ -387,7 +387,7 @@ export default function CorePillars() {
   const [hoveredIndex, setHoveredIndex] = useState(-1)
 
   return (
-    <section id="pillars" className="py-12 bg-white mb-12">
+    <section id="core-pillars" className="py-12 bg-white mb-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-plus-jakarta tracking-wide text-emerald-900">
