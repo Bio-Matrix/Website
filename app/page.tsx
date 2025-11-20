@@ -2,10 +2,6 @@ import HeroSection from "@/components/sections/hero-section"
 import NavigationBar from "@/components/navigation-bar"
 import AboutSection from "@/components/sections/about-section"
 import ProjectsSection from "@/components/sections/projects-section"
-import TeamSection from "@/components/sections/team-section"
-import NewsSection from "@/components/sections/news-section"
-import SponsorsSection from "@/components/sections/sponsors-section"
-import JoinSection from "@/components/sections/join-section"
 import Footer from "@/components/footer"
 import AnimatedSection from "@/components/animated-section"
 import CorePillars from "@/components/sections/core-pillars"
@@ -35,10 +31,10 @@ export default function Home() {
         <AboutSection />
       </AnimatedSection>
       
-      {/* Sponsors section fades up */}
+      {/*{/* Sponsors section fades up }
       <AnimatedSection animation="fade-up" delay={150}>
         <SponsorsSection />
-      </AnimatedSection>
+      </AnimatedSection>*/}
       
       {/* Footer fades in */}
       <AnimatedSection animation="fade-in" delay={100}>

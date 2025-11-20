@@ -5,21 +5,25 @@ import { cn } from "@/lib/utils"
 import Logo from "@/components/logo"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { usePathname } from "next/navigation"
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Projects", href: "#projects" },
-  { name: "Pillars", href: "#core-pillars" },
-  { name: "About", href: "#about" },
-  { name: "Team", href: "#team" },
-  { name: "Join Us", href: "#join" },
+  { name: "Home", href: "/#home" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Pillars", href: "/#core-pillars" },
+  { name: "About", href: "/#about" },
+  { name: "Team", href: "/team" },
+  //{ name: "Join Us", href: "#join" },
   { name: "Contact", href: "#contact" },
 ]
 
 export default function NavigationBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === "/"
 
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -46,20 +50,25 @@ export default function NavigationBar() {
 
     return () => {
       document.removeEventListener("keydown", handleEscape)
-      document.body.style.overflow = "unset"
+      document.body.style.overflow = "unset"  
     }
   }, [mobileMenuOpen])
 
   return (
     <>
-      <header
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100" : "bg-transparent",
-        )}
-      >
+        <header
+          className={cn(
+            "fixed top-0 left-0 right-0 z-50 h-[88px] transition-all duration-300",
+            !isHome
+              ? "bg-emerald-900 shadow-sm"
+              : isScrolled
+                ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100"
+                : "bg-transparent"
+          )}
+        >
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
-          <Logo variant={isScrolled ? "dark" : "light"} />
+          <Logo variant={!isHome ? "light" : isScrolled ? "dark" : "light"} />
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-12">
@@ -69,14 +78,14 @@ export default function NavigationBar() {
                 href={link.href}
                 className={cn(
                   "text-sm xl:text-base font-medium transition-colors relative group py-2",
-                  isScrolled ? "text-gray-700 hover:text-[rgb(46,118,94)]" : "text-white hover:text-white/80",
+                  isHome && isScrolled ? "text-gray-700 hover:text-[rgb(46,118,94)]" : "text-white hover:text-white/80",
                 )}
               >
                 {link.name}
                 <span
                   className={cn(
                     "absolute inset-x-0 bottom-0 h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-out",
-                    isScrolled ? "bg-[rgb(46,118,94)]" : "bg-white",
+                    isHome && isScrolled ? "bg-[rgb(46,118,94)]" : "bg-white",
                   )}
                 />
               </a>
