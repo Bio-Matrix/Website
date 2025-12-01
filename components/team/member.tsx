@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Member.module.css";
 
 type MemberProps = {
     src: string;
@@ -8,6 +9,7 @@ type MemberProps = {
     studyProgram?: string;
     className?: string;
     width?: number | string;
+    roleTag?: string; 
 };
 
 const emerald = "#064e3b";      // emerald-900
@@ -21,6 +23,7 @@ const Member: React.FC<MemberProps> = ({
     studyProgram = "",
     className,
     width = 240,
+    roleTag,
 }) => {
     const containerStyle: React.CSSProperties = {
         width,
@@ -28,10 +31,10 @@ const Member: React.FC<MemberProps> = ({
         backgroundColor: emerald,
         borderRadius: 12,
         overflow: "hidden",
-        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial',
-        boxShadow: "0 4px 12px rgba(0,0,0,0.25)",
+        fontFamily:
+            'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial',
         marginLeft: 8,
-        marginRight: 8
+        marginRight: 8,
     };
 
     const imageWrapperStyle: React.CSSProperties = {
@@ -39,6 +42,7 @@ const Member: React.FC<MemberProps> = ({
         aspectRatio: "3 / 3",
         overflow: "hidden",
         backgroundColor: emerald,
+        position: "relative", // needed for absolute positioned tag
     };
 
     const imgStyle: React.CSSProperties = {
@@ -46,7 +50,7 @@ const Member: React.FC<MemberProps> = ({
         height: "100%",
         objectFit: "cover",
         display: "block",
-        opacity: 0.92, // weicher Übergang zum Emerald
+        opacity: 0.92, // soft transition to emerald background
     };
 
     const captionStyle: React.CSSProperties = {
@@ -56,19 +60,46 @@ const Member: React.FC<MemberProps> = ({
     };
 
     return (
-        <div className={className} style={containerStyle}>
+        <div
+            className={`${styles.container} ${className ?? ""}`}
+            style={containerStyle}
+        >
             <figure style={{ margin: 0 }}>
                 <div style={imageWrapperStyle}>
+                    {roleTag && (
+                        <span className={styles.tag}>
+                            {roleTag}
+                        </span>
+                    )}
                     <img src={src} alt={alt} style={imgStyle} />
                 </div>
                 <figcaption style={captionStyle}>
-                    <p style={{ margin: 0, fontWeight: 600, color: "white", fontSize: 18 }}>
+                    <p
+                        style={{
+                            margin: 0,
+                            fontWeight: 600,
+                            color: "white",
+                            fontSize: 18,
+                        }}
+                    >
                         {name}
                     </p>
-                    <p style={{ margin: "4px 0 0 0", color: emeraldLight, fontWeight: 500 }}>
+                    <p
+                        style={{
+                            margin: "4px 0 0 0",
+                            color: emeraldLight,
+                            fontWeight: 500,
+                        }}
+                    >
                         {project}
                     </p>
-                    <p style={{ margin: "2px 0 0 0", color: "#d1d5db", fontSize: 13 }}>
+                    <p
+                        style={{
+                            margin: "2px 0 0 0",
+                            color: "#d1d5db",
+                            fontSize: 13,
+                        }}
+                    >
                         {studyProgram}
                     </p>
                 </figcaption>

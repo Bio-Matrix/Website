@@ -22,6 +22,7 @@ export const teamMembers = [
     name: "Paul Fingl",
     project: "Rare Diseases",
     studyProgram: "B. Sc. Bioinformatics",
+    roleTag: "Co-Director"
   },
     {
     src: "/images/team_25_26/Mathis_Fabian.jpg",
@@ -29,13 +30,14 @@ export const teamMembers = [
     name: "Fabian Mathis",
     project: "Rare Diseases",
     studyProgram: "M. Sc. Bioinformatics",
+    roleTag: "Co-Director"
   },
   {
     src: "/images/team_25_26/Kuhn_Julia.jpg",
     alt: "Julia Kuhn",
     name: "Julia Kuhn",
     project: "Rare Diseases",
-    studyProgram: "M.Sc. Bioinformatics",
+    studyProgram: "M.Sc. Bioinformatics"
   },
   {
     src: "/images/team_25_26/Hermann_Billy.jpg",
@@ -71,6 +73,7 @@ export const teamMembers = [
     name: "Leo Hintz",
     project: "RNA Folding",
     studyProgram: "B.Sc. Computer Science",
+    roleTag: "Team Lead"
   },
   {
     src: "/images/team_25_26/Morin_Simon.jpg",
