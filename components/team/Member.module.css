@@ -10,7 +10,30 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
-/* Badge in der Ecke des Bildes */
+.skeleton {
+  position: absolute;
+  inset: 0;
+  border-radius: 0; /* Container ist schon gerundet */
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.18),
+    rgba(5, 150, 105, 0.28)
+  );
+  animation: skeletonPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes skeletonPulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
 .tag {
     position: absolute;
     top: 8px;

@@ -30,12 +30,10 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="text-right">
             <h3 className="text-emerald-900 font-semibold text-lg mb-4 font-plus-jakarta">Contact Us</h3>
             <ul className="space-y-3 font-plus-jakarta">
-              <li className="flex items-start">
-                <span className="text-emerald-800/90">biomatrixclub@gmail.com</span>
-              </li>
+              <li><p className="text-emerald-800/90">biomatrixclub@gmail.com</p></li>
               <li className="text-emerald-800/80">
                 <p>Technische Universität München</p>
                 <p>Boltzmannstraße 11</p>

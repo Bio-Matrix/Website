@@ -1,31 +1,37 @@
 import Member from '@/components/team/member';
 import NavigationBar from '@/components/navigation-bar';
 import Footer from '@/components/footer';
-import { teamMembers, chunkArray } from '@/lib/utils';
+import { teamMembers } from '@/lib/utils';
 import AnimatedSection from '@/components/animated-section';
 
 export default function Team() {
   return (
-    <AnimatedSection animation="fade-in" duration={800} >
+    <AnimatedSection animation="fade-in" duration={800}>
       <main className="min-h-screen pt-[88px]">
-      <NavigationBar />
+        <NavigationBar />
 
-      <div className="space-y-8 pt-8"> 
-        {chunkArray(teamMembers, 3).map((group, groupIndex) => (
+        <section className="pt-8">
           <div
-            key={groupIndex}
-            className="flex justify-center gap-6"
+            className="
+              mx-auto
+              max-w-5xl          
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              lg:grid-cols-3
+              gap-x-6
+              gap-y-10
+              justify-items-center 
+            "
           >
-            {group.map((member) => (
+            {teamMembers.map((member) => (
               <Member key={member.name} {...member} />
             ))}
           </div>
-        ))}
-        </div>
-        <Footer/>
+        </section>
+
+        <Footer />
       </main>
     </AnimatedSection>
-    
-  )
+  );
 }
-  

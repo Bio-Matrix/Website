@@ -18,7 +18,8 @@ const projects = [
     media: {
       type: "video",
       src: "/videos/rna_folding.mp4"
-    }
+    },
+    href: "#projects"
   }
 ]
 

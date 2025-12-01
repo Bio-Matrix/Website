@@ -6,8 +6,7 @@ export default function RareDiseases() {
     return (
         <main className="flex-row justify-center min-h-screen pt-[88px] px-8 md:px-16 lg:px-32">
             <NavigationBar />
-            <div className="w-full flex justify-center">
-            <div className="w-[60%]">
+            <div className="container mx-auto px-4">
                 <h1 className="text-4xl font-bold mb-6 mt-6 text-left">Rare Diseases</h1>
 
                 <p className={pStyle}>
@@ -44,7 +43,6 @@ export default function RareDiseases() {
                 <p className={pStyle}>We create synthetic data, that resembles real medical data in structure and complexity, but doesn’t belong to any real individuals. Based on that, the “dials on the mixing board” are adjusted. Once the model performs well on synthetic data, we send the trained model to the Hauner Children’s Hospital, where the final testing is done. Here, the model fine-tunes its internal dials based on the unique and subtle patterns found only in actual clinical cases. After training, the hospital sends us back only the results—such as prediction accuracy or which connections were strongest. We use this information to further improve our model.</p>
                 <p className={pStyle}>This approach doesn’t just make predictions—it also improves interpretability. Clinicians can examine which features contributed to a prediction and explore how similar patients are connected, helping to guide diagnostic decisions.</p>
                 <p className={pStyle}>The GNN Hauner Project offers a glimpse into the future of AI-driven personalized medicine. By combining deep learning and real-world data, it provides tools that could one day support early diagnosis and treatment of rare neurological and genetic conditions in children.</p>
-            </div>
             </div>
 
             <Footer/>

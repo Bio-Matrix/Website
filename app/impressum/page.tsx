@@ -7,7 +7,7 @@ export default function Impressum() {
     <main className="min-h-screen pt-[88px] px-8 md:px-16 lg:px-32">
         <NavigationBar />
         <div className="flex-row space-between">
-          <div className="h-[80-vh]">
+          <div className="container mx-auto px-4 h-[65vh]">
             <h1 className="text-4xl font-bold mb-6 mt-6">Impressum</h1>
             <div className="flex-row space-between h-[50vh]">
               <div className="space-y-4 text-emerald-900/90">
