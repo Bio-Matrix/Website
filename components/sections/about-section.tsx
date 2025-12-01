@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function AboutSection() {
   return (
@@ -58,20 +59,23 @@ export default function AboutSection() {
                 we're committed to advancing accessible and collaborative science.
               </p>
               <div className="flex gap-6">
-                <Button 
-                  size="default"
-                  className="bg-transparent text-white hover:bg-transparent/5 font-plus-jakarta text-sm group transition-all duration-300"
-                >
+              <Button 
+                size="default"
+                className="bg-transparent text-white pl-0 hover:bg-transparent/5 font-plus-jakarta text-sm group transition-all duration-300"
+                asChild
+              >
+                <Link href="/team" className="flex items-center">
                   <span className="group-hover:underline underline-offset-4">Meet the Team</span>
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-                <Button 
+                </Link>
+              </Button>
+               {/* <Button 
                   size="default"
                   className="bg-transparent text-white hover:bg-transparent/5 font-plus-jakarta text-sm group transition-all duration-300"
                 >
                   <span className="group-hover:underline underline-offset-4">Join Us</span>
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
+                </Button>*/}
               </div>
             </div>
           </div>

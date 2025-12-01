@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-
+import Link from "next/link"
 const projects = [
   {
     title: "Graph Neural Networks for Disease Diagnosis",
@@ -9,7 +9,8 @@ const projects = [
     media: {
       type: "image",
       src: "/images/gnn.png"
-    }
+    },
+    href: "/rare-diseases"
   },
   {
     title: "RNA Folding",
@@ -69,7 +70,9 @@ export default function ProjectsSection() {
                   variant="ghost" 
                   className="text-emerald-700 p-0 hover:text-emerald-900 hover:bg-transparent font-plus-jakarta"
                 >
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href={project.href || "#"} className="flex items-center">
+                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>

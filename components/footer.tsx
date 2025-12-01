@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
  
-        {/*Bottom 
+        {/*Bottom*/}
         <div className="pt-8 border-t border-emerald-800/10 text-sm text-emerald-800/70 flex flex-col md:flex-row justify-between items-center font-plus-jakarta">
           <p>BioMatrix</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
@@ -54,7 +54,7 @@ export default function Footer() {
               Impressum
             </a>
           </div>
-        </div>*/}
+        </div>
       </div>
     </footer>
   )
