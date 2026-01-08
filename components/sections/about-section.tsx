@@ -54,7 +54,7 @@ export default function AboutSection() {
             
             <div className="flex flex-col justify-center space-y-6">
               <p className="text-base md:text-lg text-emerald-100/90 leading-relaxed">
-                Founded in 2025, BIOMATRIX emerged from a shared vision to bridge the gap between 
+                Founded in 2025, BioMatrix emerged from a shared vision to bridge the gap between 
                 biological research and modern technology. As part of the Open Research Community, 
                 we're committed to advancing accessible and collaborative science.
               </p>
