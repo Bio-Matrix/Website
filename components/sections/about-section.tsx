@@ -22,7 +22,7 @@ export default function AboutSection() {
               <div className="absolute inset-0 border border-emerald-100/20"></div>
               <div className="relative overflow-hidden bg-emerald-950/30">
                 <Image
-                  src="/images/croppedteam.jpg"
+                  src="/images/group-photo-25-26.jpeg"
                   alt="BIOMATRIX team members collaborating on research"
                   width={800}
                   height={600}
