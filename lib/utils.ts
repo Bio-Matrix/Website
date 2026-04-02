@@ -28,8 +28,17 @@ export const teamMembers = [
     alt: "Julia Kuhn",
     name: "Julia Kuhn",
     project: "Rare Diseases",
-    studyProgram: "M.Sc. Bioinformatics"
+    studyProgram: "M.Sc. Bioinformatics",
+    roleTag: "Co-Director"
   },
+  {
+  src: "/images/team_25_26/Gordin_Maximilian.jpg",
+  alt: "Maximilian Gordin",
+  name: "Maximilian Gordin",
+  project: "Rare Diseases",
+  studyProgram: "M.Sc. Mathematics in Data Science",
+  roleTag: "Team Lead"
+},
   {
     src: "/images/team_25_26/Hermann_Billy.jpg",
     alt: "Billy Hermann",
@@ -43,13 +52,6 @@ export const teamMembers = [
     name: "Fabian Klemm",
     project: "Rare Diseases",
     studyProgram: "M.Sc. Mathematics",
-  },
-  {
-    src: "/images/team_25_26/Gordin_Maximilian.jpg",
-    alt: "Maximilian Gordin",
-    name: "Maximilian Gordin",
-    project: "Rare Diseases",
-    studyProgram: "M.Sc. Mathematics in Data Science",
   },
   {
     src: "/images/team_25_26/Fahmy_Mariam.JPG",
@@ -72,6 +74,12 @@ export const teamMembers = [
     name: "Simon Morin",
     project: "RNA Folding",
     studyProgram: "B.Sc. Computer Science",
+  },
+    {
+
+    name: "Yunona Rysina",
+    project: "RNA Folding",
+    studyProgram: "M.Sc. Statistics & Data Science",
   },
     {
     src: "/images/team_25_26/Tardini_Marco.jpeg",
