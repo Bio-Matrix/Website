@@ -17,7 +17,8 @@ const projects = [
     summary: "Predicting RNA secondary structures using machine learning to understand molecular interactions",
     media: {
       type: "video",
-      src: "/videos/rna_folding.mp4"
+      src: "/videos/rna_folding.mp4",
+      poster: "/images/rna_folding.png"
     },
     href: "rna-folding"
   }
@@ -41,16 +42,18 @@ export default function ProjectsSection() {
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 border-emerald-100">
               <div className={`h-72 overflow-hidden flex items-center justify-center ${index === 0 ? 'bg-[rgba(250,252,255,255)]' : 'bg-[rgba(252,252,255,255)]'}`}>
                 {project.media.type === 'video' ? (
-                  <video 
-                    className="w-full h-full object-contain"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <source src={project.media.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                <video
+                  className="w-full h-full object-contain"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  poster={project.media.poster}
+                >
+                  <source src={project.media.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
                 ) : (
                   <img
                     src={project.media.src}

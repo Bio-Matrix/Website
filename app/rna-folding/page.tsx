@@ -40,16 +40,18 @@ export default function RNAFolding() {
         {/* Illustration */}
         <section className="mt-8">
           <div className="relative w-[80%] aspect-[4/3] overflow-hidden rounded-xl mx-auto">
-          <video
-            className="w-full h-full object-contain p-0"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-              <source src="videos/rna_folding.mp4" type="video/mp4" />
-              
-            </video>
+            <video
+                className="w-full h-full object-contain"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                poster={"/images/rna_folding.png"}
+              >
+                <source src={"/videos/rna_folding.mp4"} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
           </div>
           
         </section>
