@@ -6,7 +6,7 @@ import AnimatedSection from '@/components/animated-section';
 
 export default function Team() {
   return (
-    <AnimatedSection animation="fade-in" duration={800}>
+
       <main className="min-h-screen pt-[88px]">
         <NavigationBar />
 
@@ -32,6 +32,5 @@ export default function Team() {
 
         <Footer />
       </main>
-    </AnimatedSection>
   );
 }

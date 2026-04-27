@@ -13,7 +13,7 @@ export default function RareDiseases() {
         {/* Title + meta info */}
         <header className="mt-8 border-b border-emerald-100 pb-6">
           <h1 className="text-3xl md:text-4xl font-bold text-emerald-950">
-            Rare Diseases
+            Graph Neural Networks for Disease Diagnosis
           </h1>
           <p className={`${bodyText} mt-3 text-base md:text-lg`}>
             The Hauner GNN project supports clinicians in detecting rare
@@ -31,25 +31,22 @@ export default function RareDiseases() {
               <div>since TUM AI Hackathon 2024</div>
             </div>
             <div>
-              <div className="font-semibold text-emerald-950">Technologies</div>
+              <div className="font-semibold text-emerald-950">Technology</div>
               <div>Graph Neural Networks</div>
             </div>
           </div>
         </header>
 
         {/* Illustration */}
-        <section className="mt-8">
-          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-xl bg-emerald-50">
-            <Image
-              src="/images/hauner-gnn-graph.jpg"
-              alt="Graph of patients, biological features, and rare diseases"
-              fill
-              className="object-contain p-4"
-              priority
-            />
-          </div>
-        </section>
-
+      <div className="relative w-[80%] aspect-[4/3] overflow-hidden  bg-white mx-auto">
+        <Image
+          src="images/gnn.png"
+          alt="Graph of patients, biological features, and rare diseases"
+          fill
+          className="object-contain p-0"
+          priority
+        />
+      </div>
         {/* English project text */}
         <article className="mt-10 space-y-10">
           {/* Problem */}
@@ -67,7 +64,7 @@ export default function RareDiseases() {
             <p className={bodyText}>
               To help address this pressing issue, the Hauner project was
               launched as a challenge during the TUM AI Hackathon 2024 and has
-              since become the first major effort within Biomatrix.
+              since become the first major effort within BioMatrix.
             </p>
           </section>
 
@@ -101,9 +98,6 @@ export default function RareDiseases() {
               patients, their biological features, and disease diagnoses. This
               network is based on real-world clinical data sourced through our
               collaboration with the Dr. von Hauner Children&apos;s Hospital.
-              To make the model scalable and focused, the graph is divided into
-              subgraphs, each consisting of 100 patient nodes, which
-              facilitates the detection of common patterns.
             </p>
 
             <h3 className="text-xl font-semibold text-emerald-900 mt-6 mb-2">
@@ -153,13 +147,12 @@ export default function RareDiseases() {
               where it is evaluated and fine-tuned on real clinical cases.
             </p>
             <p className={bodyText}>
-              After training, the hospital only returns aggregated results—such
-              as prediction accuracy or which connections were strongest—which
+              After training, the hospital only returns aggregated results, which
               we then use to further improve the model.
             </p>
           </section>
 
-          {/* Interpretability */}
+          {/* Interpretability 
           <section>
             <h2 className="text-2xl font-semibold text-emerald-900 mb-3">
               Interpretability for clinicians
@@ -176,7 +169,7 @@ export default function RareDiseases() {
               day support early diagnosis and treatment of rare neurological and
               genetic conditions in children.
             </p>
-          </section>
+          </section>*/}
         </article>
       </div>
 

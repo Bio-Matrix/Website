@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "./Member.module.css";
 
 type MemberProps = {
-  src: string;
+  src?: string;
   alt?: string;
   name: string;
   project?: string;

@@ -19,7 +19,7 @@ const projects = [
       type: "video",
       src: "/videos/rna_folding.mp4"
     },
-    href: "#projects"
+    href: "rna-folding"
   }
 ]
 
@@ -67,14 +67,14 @@ export default function ProjectsSection() {
                 <p className="text-emerald-800/70">{project.summary}</p>
               </CardContent>
               <CardFooter className="px-5 pb-4 pt-0">
-                {/*<Button 
+                {<Button 
                   variant="ghost" 
                   className="text-emerald-700 p-0 hover:text-emerald-900 hover:bg-transparent font-plus-jakarta"
                 >
                   <Link href={project.href || "#"} className="flex items-center">
                     Learn More <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
-                </Button>*/}
+                </Button>}
               </CardFooter>
             </Card>
           ))}
